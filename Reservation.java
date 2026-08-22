@@ -44,8 +44,20 @@ public class Reservation implements Serializable {
         return totalAmount;
     }
 
+    public int getNumberOfNights() {
+        return numberOfNights;
+    }
+
+    public LocalDate getBookingDate() {
+        return bookingDate;
+    }
+
     public boolean isPaymentDone() {
         return paymentDone;
+    }
+
+    public void setBookingDate(LocalDate bookingDate) {
+        this.bookingDate = bookingDate;
     }
 
     public void setPaymentDone(boolean paymentDone) {

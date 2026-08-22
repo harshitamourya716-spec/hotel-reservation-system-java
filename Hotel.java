@@ -159,7 +159,9 @@ public class Hotel {
         try (PrintWriter pw = new PrintWriter(new FileWriter(RESERVATIONS_FILE))) {
             for (Reservation r : reservations) {
                 pw.println(r.getReservationId() + "," + r.getGuestName() + "," +
-                        r.getRoomNumber() + "," + r.getTotalAmount() + "," + r.isPaymentDone());
+                        r.getRoomNumber() + "," + r.getTotalAmount() + "," +
+                        r.getNumberOfNights() + "," + r.getBookingDate() + "," +
+                        r.isPaymentDone());
             }
         } catch (IOException e) {
             System.out.println("Error saving reservations: " + e.getMessage());
@@ -194,13 +196,16 @@ public class Hotel {
                     String guestName = parts[1];
                     int roomNumber = Integer.parseInt(parts[2]);
                     double total = Double.parseDouble(parts[3]);
-                    boolean paid = Boolean.parseBoolean(parts[4]);
+                    int nights = Integer.parseInt(parts[4]);
+                    java.time.LocalDate bookingDate = java.time.LocalDate.parse(parts[5]);
+                    boolean paid = Boolean.parseBoolean(parts[6]);
 
                     String category = "Standard";
                     Room r = findRoom(roomNumber);
                     if (r != null) category = r.getCategory();
 
-                    Reservation res = new Reservation(id, guestName, roomNumber, category, 1, total);
+                    Reservation res = new Reservation(id, guestName, roomNumber, category, nights, total);
+                    res.setBookingDate(bookingDate);
                     res.setPaymentDone(paid);
                     reservations.add(res);
 
