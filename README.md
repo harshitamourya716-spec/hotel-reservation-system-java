@@ -1,7 +1,7 @@
 # CodeAlpha Hotel Reservation System
 
 **Author:** Harshita Mourya | B.Tech CSE, Technocrats Institute of Technology, Bhopal (2nd Year)
-**Internship:** CodeAlpha Java Programming Internship — Task 4
+**Internship:** CodeAlpha Java Programming Internship — Task 3
 
 A console-based Java application to search, book, and manage hotel rooms.
 This was my second task for the internship, so I focused on getting the
