@@ -1,7 +1,6 @@
-# CodeAlpha Hotel Reservation System
+# Hotel Reservation System
 
 **Author:** Harshita Mourya | B.Tech CSE, Technocrats Institute of Technology, Bhopal (2nd Year)
-**Internship:** CodeAlpha Java Programming Internship — Task 4
 
 A console-based Java application to search, book, and manage hotel rooms.
 This was my second task for the internship, so I focused on getting the
@@ -32,7 +31,7 @@ java Main
 
 ## Project Structure
 ```
-CodeAlpha_HotelReservationSystem/
+/HotelReservationSystem/
 ├── Room.java          # Represents a hotel room
 ├── Reservation.java   # Represents a booking
 ├── Hotel.java         # Core business logic + file persistence
@@ -60,5 +59,4 @@ I also got more comfortable structuring a project into separate classes
 where each one has just one job (Room = data, Hotel = logic, Main = UI).
 
 ---
-Built for the **CodeAlpha Java Programming Internship**.
-Harshita Mourya, B.Tech CSE, Technocrats Institute of Technology, Bhopal
+Built by Harshita Mourya, B.Tech CSE, Technocrats Institute of Technology, Bhopal
